@@ -3,6 +3,11 @@ $(document).ready(function() {
 
     updateSlideNumberParagraph();
 
+    if (typeof pageSpecific == 'function')
+    {
+        pageSpecific();
+    }
+
     setTimeout(function(){
         gotoPage();
     }, timeout);
