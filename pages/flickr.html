@@ -6,13 +6,7 @@
     <title>FSCONS flickr</title>
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
-    <!-- 
-    if you want more special formatting for just this page, please add another
-    link here, and add a corresponding file (named ${FILENAME%.html}.css to the
-    css directory 
-    you shouldn't make any other modifications inside the <head/> of this
-    document other than adding stylesheets as necessary 
-    -->
+    <link rel="stylesheet" href="./css/flickr.css" type="text/css" media="screen">
 
     <script src="./scripts/jquery.js" type="text/javascript"></script>
     <script src="./scripts/jquery.cookie.js" type="text/javascript"></script>
@@ -22,7 +16,7 @@
            We don't know how long it would take for flickr to load an image, so
            we'll need a little longer timeout to ensure hat it has time to load
          */
-        setPageTimeout(15000);
+        setPageTimeout(20000);
     </script>
     <script type="text/javascript">
         function pageSpecific()
@@ -43,7 +37,6 @@
     <header id="flickHeader">
         <h2>Latest flickr image</h2>
     </header>
-    <section id="flickrData">
-    </section>
+    <section id="flickrData"></section>
 </body>
 </html>
