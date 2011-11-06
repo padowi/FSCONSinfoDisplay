@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>FSCONS :: Public Transport</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
+
+    <script src="./scripts/jquery.js" type="text/javascript"></script>
+    <script src="./scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="./scripts/common.functions.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        /*
+            if you wish to change the number of milliseconds this page is
+            displayed, uncomment the next line and change the value, note that
+            value is in milliseconds
+         */
+        //setPageTimeout(8500);
+    </script>
+    <script type="text/javascript">
+        function pageSpecific()
+        {
+            // if you need something done specifically for this page, following
+            // the successful loading of the page, place it here
+            // #ctl00_FullRegion_MainAndFooterRegion_MainRegion_RealTimeInformationNextTripControl_GridViewStops
+        }
+    </script>
+    <script src="./scripts/proxy.loader.js" type="text/javascript"></script>
+</head>
+<body>
+    <header id="trafficHeader">
+        <h2>Public transport</h2>
+    </header>
+    <section id="trafficData">
+        <iframe id="vtDocument" src="http://vasttrafik.se/Trafiklaget/Avgangar-i-realtid/Nasta-Tur/?val=00004490!-2003932870">
+        </iframe>
+        <p>Template data</p>
+    </section>
+</body>
+</html>
