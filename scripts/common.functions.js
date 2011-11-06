@@ -6,6 +6,7 @@
  */
 function gotoPage()
 {
+    return;
     $(parent.document).find('#infoDisplay').attr('src', './proxy.php');
 }
 

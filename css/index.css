@@ -1,13 +1,15 @@
 html, body {
-    height: 100%;
+    margin: 0px;
+    padding: 5px;
+    height: 94%;
 }
 
 #indexHeader {
     text-align: center;
 }
-    #indexHeader > h1 {
-        display: inline;
-    }
+#indexHeader > h1 {
+    display: inline;
+}
 
 p#slideNumber {
     display: inline;
@@ -19,6 +21,6 @@ p#slideNumber {
 #infoDisplay {
     border: 0px;
     width: 100%;
-    height: 80%;
-    min-height: 80%;
+    height: 99%;
+    min-height: 99%;
 }

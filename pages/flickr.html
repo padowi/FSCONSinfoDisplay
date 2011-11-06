@@ -5,12 +5,12 @@
 
     <title>FSCONS flickr</title>
 
-    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="./css/flickr.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/flickr.css" type="text/css" media="screen">
 
-    <script src="./scripts/jquery.js" type="text/javascript"></script>
-    <script src="./scripts/jquery.cookie.js" type="text/javascript"></script>
-    <script src="./scripts/common.functions.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="../scripts/common.functions.js" type="text/javascript"></script>
     <script type="text/javascript">
         /*
            We don't know how long it would take for flickr to load an image, so
@@ -28,10 +28,35 @@
                 t_url = 'http://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_' + 'z.jpg';
 
                 $('#flickrData').append('<img src="' + t_url + '" />');
+
+                var img = $('#flickrData img');
+                var iframe = $(parent.document).find('#infoDisplay');
+
+                var imgOrigHeight = $(img).height();
+                var imgOrigWidth = $(img).width();
+
+                if ( $(img).height() > $(img).width() )
+                {
+                    $(img).attr('height', $(iframe).height() - 100);
+                    if ( $(img).width() > $(iframe).width() )
+                    {
+                        $(img).attr('height', imgOrigHeight);
+                        $(img).attr('width', $(iframe).width() - 100);
+                    }
+                }
+                else
+                {
+                    $(img).attr('width', $(iframe).width() - 100);
+                    if ( $(img).height() > $(iframe).height() )
+                    {
+                        $(img).attr('width', imgOrigWidth);
+                        $(img).attr('height', $(iframe).height() - 100);
+                    }
+                }
             });
         }
     </script>
-    <script src="./scripts/proxy.loader.js" type="text/javascript"></script>
+    <script src="../scripts/proxy.loader.js" type="text/javascript"></script>
 </head>
 <body>
     <header id="flickHeader">
