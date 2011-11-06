@@ -33,7 +33,7 @@
                 var photo = data.photos.photo[0];
                 t_url = 'http://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_' + 'z.jpg';
 
-                $('div#flickrData').append('<img src="' + t_url + '" />');
+                $('#flickrData').append('<img src="' + t_url + '" />');
             });
         }
     </script>
