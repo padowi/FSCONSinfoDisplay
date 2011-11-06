@@ -19,6 +19,6 @@ p#slideNumber {
 #infoDisplay {
     border: 0px;
     width: 100%;
-    height: 100%;
+    height: 80%;
     min-height: 80%;
 }
